@@ -72,11 +72,6 @@ gem 'jquery-rails'
 
 gem 'kaminari', '~> 1.2.1'
 
-gem 'dotenv-rails'
-group :production do
-  gem 'mysql2'
-end
-
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'factory_bot_rails'
