@@ -1,15 +1,4 @@
 <main class="container">
-  <div class="row">
-    <%if @fashion.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@fashion.errors.count, "error") %> prohibited this fashion from being saved:</h2>
-          <ul>
-            <% @fashion.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-          </ul>
-      </div>
-    <% end %>
   <div class="col-md-10 offset-md-1">
     <div class="py-5">
       <table class="table table-hover table-inverse">

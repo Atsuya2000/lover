@@ -13,10 +13,6 @@
           	  <th>name</th>
           	  <th><%= @user.name %></th>
             </tr>
-            <tr>
-          	  <th>introduction</th>
-          	  <th><%= @user.introduction %></th>
-            </tr>
           </tbody>
         </table>
         <%= link_to edit_user_path(current_user), class: 'btn btn-light' do %>
@@ -24,17 +20,6 @@
         <% end %>
       </div>
     </div>
-
-    <%if @fashion.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@fashion.errors.count, "error") %> prohibited this fashion from being saved:</h2>
-          <ul>
-            <% @fashion.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-          </ul>
-      </div>
-    <% end %>
     </div>
   </div>
 </main>
