@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   attachment :profile_image
 
+  has_many :user_rooms
+  has_many :chats
+  has_many :rooms, through: :user_rooms
+
 end
