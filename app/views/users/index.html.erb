@@ -18,19 +18,21 @@
                   <%= attachment_image_tag user, :profile_image, fallback: "no_image.png", size: "300x300", class: "user_profile_image" %>
                 </div>
                 <% end %>
-                <% if user.favorited_by?(current_user) %>
-                  <p>
-                    <%= link_to user_favorites_path(user), method: :delete do %>
-                      ♥<%= user.favorites.count %> いいね
-                    <% end %>
-                  </p>
-                  <% else %>
-                  <p>
-                    <%= link_to user_favorites_path(user), method: :post do %>
-                      ♡<%= user.favorites.count %> いいね
-                    <% end %>
-                  </p>
-                <% end %>
+                <div id=<%="likes_buttons_#{user.id}"%>>
+                  <% if user.favorited_by?(current_user) %>
+                    <p>
+                      <%= link_to user_favorites_path(user.id), method: :delete, remote: true do %>
+                        ♥<%= user.favorites.count %>
+                      <% end %>
+                    </p>
+                    <% else %>
+                    <p>
+                      <%= link_to user_favorites_path(user.id), method: :post, remote: true do %>
+                        ♡<%= user.favorites.count %>
+                      <% end %>
+                    </p>
+                  <% end %>
+                </div>
               </td>
               <td>
                 <%= user.name %>
