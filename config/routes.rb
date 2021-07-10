@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'chats/show'
-  devise_for :users
+  devise_for :users, :controllers => {
+   :registrations => 'users/registrations',
+  }
   root to: 'homes#top'
   resources :users, only: [:index, :show, :edit, :update] do
     resource :favorites, only: [:create, :destroy]
