@@ -7,10 +7,10 @@
             <tr>
               <th>
                 <div class="img">
-                  <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, fallback: "no_image.png", class: "user_profile_image" %>
+                  <%= attachment_image_tag @user, :profile_image, fallback: "no_image.png", size: "300x300", class: "user_profile_image" %>
                 </div>
               </th>
-          	  <th><%= @user.name %></th>
+          	  <th class="py-5"><%= @user.name %></th>
             </tr>
           </tbody>
         </table>

@@ -14,7 +14,7 @@
             <tr>
               <td>
                 <%= link_to user_path(user.id) do %>
-                  <div class="img">
+                <div class="img">
                   <%= attachment_image_tag user, :profile_image, fallback: "no_image.png", size: "300x300", class: "user_profile_image" %>
                 </div>
                 <% end %>
