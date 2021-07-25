@@ -81,6 +81,3 @@ end
 
 gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
-
-gem 'react-rails'
-gem 'webpacker'
