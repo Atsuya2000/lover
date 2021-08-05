@@ -6,9 +6,7 @@
           <tbody>
             <tr>
               <th>
-                <div class="img">
-                  <%= attachment_image_tag @user, :profile_image, fallback: "no_image.png", size: "300x300", class: "user_profile_image" %>
-                </div>
+                <%= attachment_image_tag @user, :profile_image, fallback: "no_image.png", size: "300x300", class: "user_profile_image" %>
               </th>
           	  <th class="py-5"><%= @user.name %></th>
             </tr>
