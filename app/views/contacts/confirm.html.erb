@@ -14,7 +14,6 @@
             </tr>
           </tbody>
         </table>
-
         <div class="py-5">
           <%= form_for(@contact) do |f| %>
             <%= f.hidden_field :name %>
@@ -25,7 +24,6 @@
             <div><%= f.submit 'submit' %></div>
           <% end %>
         </div>
-
         <div class="py-5">
           <%= form_for @contact, url: back_path do |f| %>
             <%= f.hidden_field :name %>
