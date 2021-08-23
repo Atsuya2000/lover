@@ -18,7 +18,6 @@
           <%= form_for(@contact) do |f| %>
             <%= f.hidden_field :name %>
             <%= f.hidden_field :email %>
-            <%= f.hidden_field :phone_number %>
             <%= f.hidden_field :subject %>
             <%= f.hidden_field :message %>
             <div><%= f.submit 'submit' %></div>
@@ -28,7 +27,6 @@
           <%= form_for @contact, url: back_path do |f| %>
             <%= f.hidden_field :name %>
             <%= f.hidden_field :email %>
-            <%= f.hidden_field :phone_number %>
             <%= f.hidden_field :subject %>
             <%= f.hidden_field :message %>
             <div><%= f.submit 'back' %></div>
