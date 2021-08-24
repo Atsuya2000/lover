@@ -4,11 +4,11 @@
       <div class="py-5">
         <%= form_for(@contact, url: confirm_path) do |f| %>
           <div class="form-group">
-            <%= f.label :name, 'name' %>
+            <%= f.label :name, 'name*' %>
             <%= f.text_field :name, autofocus: true, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :message, 'message' %>
+            <%= f.label :message, 'message*' %>
             <%= f.text_area :message, size: '10x10', class: 'form-control' %>
           </div>
           <div>
