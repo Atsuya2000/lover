@@ -8,7 +8,11 @@
               <th>
                 <%= attachment_image_tag @user, :profile_image, fallback: "no_image.png", size: "300x300", class: "user_profile_image" %>
               </th>
-          	  <th class="py-5"><%= @user.name %></th>
+          	  <th class="py-5">
+          	    <font size="6">
+          	      <%= @user.name %>
+          	    </font>
+          	  </th>
             </tr>
           </tbody>
         </table>
