@@ -9,9 +9,7 @@
                 <%= attachment_image_tag @user, :profile_image, fallback: "no_image.png", size: "300x300", class: "user_profile_image" %>
               </th>
           	  <th class="py-5">
-          	    <font size="3">
-          	      <%= @user.name %>
-          	    </font>
+          	    <%= @user.name %>
           	  </th>
             </tr>
           </tbody>
